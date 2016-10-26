@@ -1,0 +1,23 @@
+<%- partial('post/title', {item: item, index: false}) %>
+ <section class="row page">
+
+             <!-- content -->
+               <article class="mypage">
+                 <% if (item.description) { %>
+                      <div class="alert alert-success description">
+                              <i class="fa fa-info-circle"></i>
+                               <%- markdown(item.description) %>
+                       </div>
+                                <!-- alert -->
+                   <% } %>
+                     <%- item.content %>
+               </article>
+
+                <nav>
+                 <center>
+                     <%- partial('post/pagination', {page: item}) %>
+                   </center>
+              </nav>
+</section>
+                    <!-- row -->
+<%- partial('post/comment_footer', {page: item}) %>

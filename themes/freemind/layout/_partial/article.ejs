@@ -1,0 +1,32 @@
+<header class="page-header">		
+    <h1 class="title"><% if (item.icon) { %> <i class="<%= item.icon %>"></i> <% } %> <% if (item.page_title) { %><%= item.page_title %><% }else{ %><%= item.title %><% } %></h1>
+</header>	
+<section class="row post">
+	<!-- cols -->
+	<article class="col-md-9 mypage">		
+	  <% if (item.description) { %>
+		 <div class="alert alert-success description">
+			<i class="fa fa-info-circle"></i> <%- markdown(item.description) %>			
+		 </div> <!-- alert -->
+	  <% } %>		
+
+	  <%- item.content %>	
+     <nav>
+  	<center>
+	<%- partial('post/pagination', {page: item}) %>
+    </center>
+	</nav>  
+	</article>
+    <%- partial('post/meta', {item: item}) %>
+</section><!-- row -->
+<section class="row">
+ <!-- share -->
+    <% if (post) { %>
+        <%- partial('post/bdshare', {page: item}) %>
+        <%- partial('post/jiathis', {page: item}) %>
+    <% } %>
+	
+	<!-- comment -->
+	<%- partial('post/comment', {page: item}) %>
+</section>
+<%- partial('post/comment_footer', {page: item}) %>

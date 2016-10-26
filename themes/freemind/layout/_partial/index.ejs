@@ -1,0 +1,24 @@
+<section class="row page">
+    <% if (theme.widgets.length) { %>
+        <div class="col-md-9">
+    <% } else { %>
+         <div class="col-md-12">
+     <% } %>
+      <div class="mypage">
+       <! entry -->
+       <ul class="list-group">
+        <% page.posts.each(function(item){ %>          
+             <%- partial('post/entry', {item: item, index: index}) %>
+         <% }); %>
+         </ul>
+         <!-- pagination -->
+          <%- partial('post/pagination') %>
+       </div>
+      </div>
+        <!-- col-md-9 -->
+      <% if (theme.widgets.length) { %>
+            <div id="top_search"></div>
+            <%- partial('sidebar') %>
+       <% } %>
+</section>
+<!-- row-fluid -->

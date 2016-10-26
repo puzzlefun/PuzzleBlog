@@ -1,0 +1,14 @@
+<li class="list-group-item entry">
+    <a href="<%- config.root %><%- item.path %>" title="<%= item.title %>" class="list-group-item-heading">
+      <h4>  <%= item.title %> </h4>
+    </a>
+    <p class="list-group-item-text">
+    <%- item.description %>
+    </p>
+   <section class="row">
+      <span class="date"> <%= item.date.format(config.date_format) %> </span>
+       <a type="button" href="<%- config.root %><%- item.path %>#more" class="btn btn-link">
+                <%= __('read_more') %>
+       </a>
+  </section>
+</li>

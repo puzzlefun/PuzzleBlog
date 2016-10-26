@@ -1,0 +1,28 @@
+<nav id="main-nav" class="navbar navbar-default" role="navigation">
+    <div class="container">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <% theme.menu.forEach(function(m){ %>
+                <span class="icon-bar"></span>
+             <% }) 
+            %>
+        </button>
+        <a class="navbar-brand" href="<%- config.root %>">
+            <%= config.title %>
+        </a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <% theme.menu.forEach(function(m){ %>
+                    <li>
+                        <a href="<%- config.root %><%- m.url %>" title="<%- m.intro %>">
+			             <i class="<%- m.icon %>"></i><%- m.title %>
+			            </a>
+                    </li>
+                 <% }) %>
+            </ul>
+        </div>
+    </div>
+    <!-- container -->
+</nav>
+<div class="clearfix"></div>
