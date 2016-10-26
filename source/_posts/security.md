@@ -5,7 +5,7 @@ tags:
 - Security
 description: 利益，好奇都是对安全造成威胁的原因，本文对于原因不感兴趣，主要是介绍目前计算机科学中运用的信息安全技术。由于本人的知识有限，涉及不深，故在此抛砖引玉。
 keywords: secturity,encrypt,authorization
-------
+---
 <!--more-->
 ---------
 ## 专有名词

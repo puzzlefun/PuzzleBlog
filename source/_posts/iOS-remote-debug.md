@@ -2,7 +2,8 @@
 title: 构建iOS 远程调试环境
 date: 2016-09-21 15:07:28
 tags:
-iOS lldb 
+- iOS 
+- lldb 
 ---
 
 预备环境：
